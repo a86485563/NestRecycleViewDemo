@@ -1,0 +1,2 @@
+rootProject.name = "NestRecycleViewApp"
+include ':app'

@@ -9,15 +9,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.nestrecycleviewapp.R
-import com.example.nestrecycleviewapp.data.BookModel
-import com.example.nestrecycleviewapp.data.ParentModel
+import com.example.nestrecycleviewapp.data.CardModel
 import com.example.nestrecycleviewapp.data.lifeCircleVo.CategoryProduct
 import com.example.nestrecycleviewapp.data.lifeCircleVo.LifeCycleData
 import com.example.nestrecycleviewapp.utils.Pig
 import java.util.*
 
 
-class ParentAdapter(val parentArray : ArrayList<LifeCycleData>, val cxt : Context) : RecyclerView.Adapter<ParentAdapter.ParentViewHolder>() {
+class CategoryAdapter(val parentArray : ArrayList<LifeCycleData>, val cxt : Context) : RecyclerView.Adapter<CategoryAdapter.ParentViewHolder>() {
 
     class ParentViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
         //把layout檔的元件們拉進來，指派給當地變數
@@ -43,7 +42,7 @@ class ParentAdapter(val parentArray : ArrayList<LifeCycleData>, val cxt : Contex
         holder.category.text = currentModel?.categoryMetadata?.displayName?:""
 
         //建立booklist
-        val arrayList: ArrayList<BookModel> = ArrayList<BookModel>()
+        val arrayList: ArrayList<CardModel> = ArrayList<CardModel>()
 
 
        for(item: CategoryProduct in parentArray.get(position).data!!){
@@ -53,10 +52,10 @@ class ParentAdapter(val parentArray : ArrayList<LifeCycleData>, val cxt : Contex
                             if(!((item.prodImagesRatioSmall?.get(0)?.contains(".jpg") == true) ||(item.prodImagesRatioSmall?.get(0)?.contains(".png") == true)))
                                 img = item.prodImagesRatioSmall?.get(0)?:Pig.IMG
            }
-           arrayList.add(BookModel(item.prodName?:"",img))
+           arrayList.add(CardModel(item.prodName?:"",img))
        }
 
-        val childRecyclerViewAdapter = BookAdapter(arrayList);
+        val childRecyclerViewAdapter = CardAdapter(arrayList);
         holder.childRecyclerView.setAdapter(childRecyclerViewAdapter);
     }
 

@@ -5,9 +5,8 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.nestrecycleviewapp.adapter.ParentAdapter
+import com.example.nestrecycleviewapp.adapter.CategoryAdapter
 import com.example.nestrecycleviewapp.api.LifeCicleService
-import com.example.nestrecycleviewapp.data.ParentModel
 import com.example.nestrecycleviewapp.data.lifeCircleVo.LifeCircleResponse
 import com.example.nestrecycleviewapp.data.lifeCircleVo.LifeCycleData
 import retrofit2.Call
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
                 Log.d("Huang", " get teams  success "+response.body())
                 if(response?.body() != null){
-                    val parentAdapter = ParentAdapter(response.body()?.data!! as ArrayList<LifeCycleData>, context)
+                    val parentAdapter = CategoryAdapter(response.body()?.data!! as ArrayList<LifeCycleData>, context)
                     parentRecycleView.setAdapter(parentAdapter)
                     parentAdapter.notifyDataSetChanged()
                 }

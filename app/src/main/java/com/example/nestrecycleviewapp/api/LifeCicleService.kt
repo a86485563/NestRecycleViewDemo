@@ -7,5 +7,5 @@ import retrofit2.http.GET
 interface LifeCicleService {
     @GET("recommendations")
     fun getData(
-       ): Call<LifeCircleResponse>;
+    ): Call<LifeCircleResponse>;
 }

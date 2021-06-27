@@ -28,7 +28,7 @@ class CategoryAdapter(val parentArray : ArrayList<LifeCycleData>, val cxt : Cont
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParentViewHolder {
         //將book_items 與 BookBiewHolder 綁定
         val inflater = LayoutInflater.from(parent.context)
-        val example = inflater.inflate(R.layout.parent_recyclerview_items, parent, false)
+        val example = inflater.inflate(R.layout.category_recyclerview_items, parent, false)
         return ParentViewHolder(example)
     }
 

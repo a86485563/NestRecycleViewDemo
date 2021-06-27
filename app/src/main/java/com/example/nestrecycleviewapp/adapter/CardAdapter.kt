@@ -29,7 +29,7 @@ class CardAdapter(val lifeCicleDatas : ArrayList<CardModel>) : RecyclerView.Adap
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookBiewHolder {
         //將book_items 與 BookBiewHolder 綁定
         val inflater = LayoutInflater.from(parent.context)
-        val example = inflater.inflate(R.layout.book_items, parent, false)
+        val example = inflater.inflate(R.layout.card_items, parent, false)
         return BookBiewHolder(example)
     }
 

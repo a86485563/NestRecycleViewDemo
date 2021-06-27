@@ -236,3 +236,6 @@ implementation 'com.google.code.gson:gson:2.8.7'
   2. https://ithelp.ithome.com.tw/articles/10216674
 - gson :
   1. https://github.com/google/gson
+
+
+![image](https://github.com/a86485563/NestRecycleViewDemo/blob/master/Demo.png)

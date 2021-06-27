@@ -41,12 +41,12 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : Callback<LifeCircleResponse> {
             override fun onFailure(call: Call<LifeCircleResponse>?, t: Throwable?) {
 
-                Log.d("Call", " get teams fail ")
+                Log.d("MyCall", " get teams fail ")
             }
 
             override fun onResponse(call: Call<LifeCircleResponse>?, response: Response<LifeCircleResponse>) {
 
-                Log.d("Call", " get teams  success "+response.body())
+                Log.d("MyCall", " get teams  success "+response.body())
                 if(response?.body() != null){
                     val parentAdapter = CategoryAdapter(response.body()?.data!! as ArrayList<LifeCycleData>, context)
                     parentRecycleView.setAdapter(parentAdapter)

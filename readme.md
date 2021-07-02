@@ -14,7 +14,7 @@
 
 ## 目標
 
-一隻有關 httpconnect 取值，然後使用巢壯式 RecycleView 來顯示的程式。歐對了他是 kotlin 喔，潮ㄅ。
+一隻有關 httpconnect 取值，然後使用巢狀式 RecycleView 來顯示的程式。歐對了他是 kotlin 喔，潮ㄅ。
 
 ## 基本設定和使用須知
 
